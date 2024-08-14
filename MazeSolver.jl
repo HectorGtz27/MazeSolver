@@ -43,12 +43,12 @@ function initialize_model(maze_map)
     # El signo (!) indica que la funcion agent_step! modifica el estado del agente
     model = StandardABM(Walker, space; agent_step!)
     # add_agent! agrega un agente en la posicion (1, 4) al modelo 
-    add_agent!((1, 1), model)
+    add_agent!((5, 110), model)
     # plan_route! es una funcion que calcula la ruta mas corta entre dos puntos 
     # Como los agentes en el modelo se almacenan en una lista, se accede al agente en la posicion 1 que añadido anteriormente
     # (41, 32) es la posicion la posicion a la que se quiere llegar
     # pathfinder es el objeto que se encarga de encontrar la ruta mas corta
-    plan_route!(model[1], (10, 10), pathfinder)
+    plan_route!(model[1], (199, 70), pathfinder)
 
     return model, pathfinder
 end
